@@ -1,0 +1,86 @@
+@use '../../../styles/variables.scss' as vars;
+
+.darkBG {
+	@apply w-screen h-screen z-[1001] top-2/4 left-2/4 absolute;
+	background-color: rgba(0, 0, 0, 0.502);
+	transform: translate(-50%, -50%);
+}
+
+@keyframes zoom-in {
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.centered {
+	@apply fixed top-2/4 left-2/4 z-[1001] max-w-[960px] p-6;
+	transform: translate(-50%, -50%);
+	animation: zoom-in 0.3s;
+
+	@media (max-width: vars.$md3) {
+		@apply p-0;
+	}
+}
+
+.compact {
+	@apply max-w-[500px] h-auto;
+
+	@media (max-width: vars.$md3) {
+		@apply p-[10px] max-w-none w-full;
+	}
+
+	.modal {
+		@apply bg-[#222736];
+	}
+
+	.heading {
+		@apply text-white;
+	}
+
+	.closeBtn {
+		@apply bg-[#38393a];
+
+		path {
+			@apply fill-white;
+		}
+
+		&:hover {
+			path {
+				@apply fill-[#8d8d8d] transition-colors;
+			}
+		}
+	}
+}
+
+.modal {
+	@apply bg-white text-white w-full h-full relative overflow-hidden rounded-2xl px-4;
+}
+
+.modalHeader {
+	@apply h-[50px] flex items-center;
+}
+
+.heading {
+	@apply text-2xl text-black tracking-[4px] uppercase py-0 px-5;
+
+	@media (max-width: vars.$md4) {
+		@apply pt-5;
+	}
+}
+
+.closeBtn {
+	@apply cursor-pointer py-[2px] px-[4px] border-none bg-white transition-colors absolute top-0 right-0;
+
+	&:hover {
+		path {
+			@apply fill-[#b1afaf] transition-colors;
+		}
+	}
+}

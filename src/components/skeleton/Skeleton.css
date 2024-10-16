@@ -1,0 +1,54 @@
+.skeleton {
+	background-color: rgb(199, 199, 199);
+	border-radius: 4px;
+}
+
+.skeleton.image {
+	@apply w-[128px] h-[128px] rounded-[50%] flex-auto mb-6;
+}
+
+.skeleton.title {
+	height: 30px;
+	margin: 0;
+}
+
+.skeleton.text {
+	height: 20px;
+}
+
+.skeleton.description {
+	height: 75px;
+}
+
+.skeleton.button {
+	height: 50px;
+}
+
+.skeleton.width-100 {
+	width: 100%;
+}
+
+.skeleton.width-50 {
+	width: 50%;
+}
+
+.skeleton.width-25 {
+	width: 25%;
+}
+
+.skeleton.profile-circle {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+/* animation */
+@keyframes pulse {
+	50% {
+		opacity: 0.5;
+	}
+}
+
+.animate-pulse {
+	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

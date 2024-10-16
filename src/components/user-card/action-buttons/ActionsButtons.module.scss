@@ -1,0 +1,31 @@
+.cardActions {
+	@apply mt-5 flex items-center;
+
+	> button {
+		@apply py-[10px] px-[20px] border-none rounded-[5px] w-full text-xl transition-colors;
+	}
+}
+
+.saveBtn {
+	@apply bg-[#28a745] text-white mr-2;
+
+	&:hover {
+		@apply bg-[#28a745]/70;
+	}
+}
+
+.weatherBtn {
+	@apply bg-[#007bff] text-white ml-2;
+
+	&:hover {
+		@apply bg-[#007bff]/70;
+	}
+}
+
+.deleteBtn {
+	@apply bg-[#ff3838] text-white mr-2;
+
+	&:hover {
+		@apply bg-[#ff3838]/70;
+	}
+}

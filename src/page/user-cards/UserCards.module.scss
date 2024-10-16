@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as vars;
+
+.cardsBody {
+	@apply flex flex-wrap mt-12 mb-0 mx-[-25px] overflow-hidden;
+
+	@media (max-width: vars.$md3) {
+		@apply flex-col mt-8 mx-[-15px];
+	}
+
+	@media (max-width: vars.$md4) {
+		@apply w-full mt-4 mx-0;
+	}
+}

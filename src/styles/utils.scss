@@ -1,0 +1,7 @@
+.cardItem {
+	&-exit {
+		&-active {
+			@apply opacity-0 transition-opacity duration-500 ease-out;
+		}
+	}
+}

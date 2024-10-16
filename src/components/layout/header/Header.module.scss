@@ -1,0 +1,31 @@
+@use '../../../styles/variables.scss' as vars;
+
+.header {
+	@apply bg-[#6162a3] h-[100px] flex items-center justify-between sticky top-0 z-[1000] px-4;
+
+	&__title {
+		@apply font-['Bebas_Neue'] text-7xl tracking-wider text-white;
+
+		@media (max-width: vars.$md4) {
+			@apply text-6xl;
+		}
+	}
+}
+
+.button {
+	@apply flex items-center justify-center bg-black text-white px-[10px] py-[15px] rounded-[5px] transition-colors;
+
+	&:hover {
+		@apply bg-black/70;
+	}
+
+	@media (max-width: vars.$md4) {
+		> span > svg {
+			@apply hidden;
+		}
+	}
+}
+
+.counter {
+	@apply w-6 h-6 bg-red-400 rounded-full flex justify-center items-center font-bold min-w-6;
+}
